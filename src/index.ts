@@ -1,6 +1,8 @@
 import fastify from "fastify";
 import helmet from "fastify-helmet";
 import cors from "fastify-cors";
+import * as blockchain from "caip-api";
+
 import config from "./config";
 import {
   apiGetAccountAssets,
@@ -16,7 +18,6 @@ import {
   rpcPostCustomRequest,
   rpcPostRequest,
 } from "./rpc";
-import { getChainConfig, getSupportedChains, sanitizeChainId } from "./chains";
 import { apiGetAccountCollectibles } from "./opensea";
 import { apiGetEthPrices, apiGetDaiPrices } from "./cryptocompare";
 import { verifyAddress, verifyChainId, verifyContractAddress, verifyData } from "./verifiers";
@@ -256,7 +257,7 @@ app.post("/custom-request", async (req, res) => {
 });
 
 app.post("/rpc", async (req, res) => {
-  const chainId = sanitizeChainId(req.query.chainId);
+  const chainId = req.query.chainId;
 
   // tslint:disable-next-line:strict-type-predicates
   if (!chainId || typeof chainId !== "number") {
@@ -289,7 +290,7 @@ app.get("/chain-data", async (req, res) => {
   const chainId = verifyChainId(req, res);
 
   try {
-    const chainData = getChainConfig(chainId);
+    const chainData = blockchain.getChainConfig(chainId);
 
     res.status(200).send({
       success: true,
@@ -304,7 +305,7 @@ app.get("/chain-data", async (req, res) => {
 app.get("/supported-chains", async (req, res) => {
   res.status(200).send({
     success: true,
-    result: getSupportedChains(),
+    result: blockchain.getSupportedChains(),
   });
 });
 

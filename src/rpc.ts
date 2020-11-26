@@ -1,12 +1,12 @@
 import axios, { AxiosResponse } from "axios";
-import { formatJsonRpcRequest, JsonRpcRequest } from "rpc-json-utils";
 import { hexToUtf8 } from "enc-utils";
+import * as blockchain from "caip-api";
+import { formatJsonRpcRequest, JsonRpcRequest } from "rpc-json-utils";
 
-import { getChainConfig } from "./chains";
 import { convertStringToNumber } from "./bignumber";
 
 export const rpcGetAccountBalance = async (address: string, chainId: string): Promise<number> => {
-  const { rpcUrl } = getChainConfig(chainId);
+  const { rpcUrl } = blockchain.getChainConfig(chainId);
 
   if (!rpcUrl && typeof rpcUrl !== "string") {
     throw new Error("Invalid or missing rpc url");
@@ -20,7 +20,7 @@ export const rpcGetAccountBalance = async (address: string, chainId: string): Pr
 };
 
 export const rpcGetAccountNonce = async (address: string, chainId: string): Promise<number> => {
-  const { rpcUrl } = getChainConfig(chainId);
+  const { rpcUrl } = blockchain.getChainConfig(chainId);
 
   if (!rpcUrl && typeof rpcUrl !== "string") {
     throw new Error("Invalid or missing rpc url");
@@ -36,7 +36,7 @@ export const rpcGetAccountNonce = async (address: string, chainId: string): Prom
 export const rpcGetGasLimit = async (contractAddress: string, data: string): Promise<number> => {
   const chainId = "eip155:1";
 
-  const { rpcUrl } = getChainConfig(chainId);
+  const { rpcUrl } = blockchain.getChainConfig(chainId);
   const request = formatJsonRpcRequest("eth_estimateGas", [
     {
       to: contractAddress,
@@ -49,7 +49,7 @@ export const rpcGetGasLimit = async (contractAddress: string, data: string): Pro
 };
 
 export const rpcGetBlockNumber = async (chainId: string): Promise<number> => {
-  const { rpcUrl } = getChainConfig(chainId);
+  const { rpcUrl } = blockchain.getChainConfig(chainId);
 
   if (!rpcUrl && typeof rpcUrl !== "string") {
     throw new Error("Invalid or missing rpc url");
@@ -64,7 +64,7 @@ export const rpcPostCustomRequest = async (
   chainId: string,
   customRpc: JsonRpcRequest,
 ): Promise<any> => {
-  const { rpcUrl } = getChainConfig(chainId);
+  const { rpcUrl } = blockchain.getChainConfig(chainId);
 
   if (!rpcUrl && typeof rpcUrl !== "string") {
     throw new Error("Invalid or missing rpc url");
@@ -81,7 +81,7 @@ export const rpcPostRequest = async (
   chainId: string,
   rpcRequest: JsonRpcRequest,
 ): Promise<AxiosResponse> => {
-  const { rpcUrl } = getChainConfig(chainId);
+  const { rpcUrl } = blockchain.getChainConfig(chainId);
 
   if (!rpcUrl && typeof rpcUrl !== "string") {
     throw new Error("Invalid or missing rpc url");

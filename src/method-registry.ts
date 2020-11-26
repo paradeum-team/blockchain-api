@@ -1,6 +1,7 @@
 import axios from "axios";
-import { padRight, removeHexPrefix, payloadId, hexToUtf8, getChainConfig } from "./utilities";
-import { Method } from "./types";
+import { payloadId } from "rpc-json-utils";
+import { Ethereum, getChainConfig } from "caip-api";
+import { hexToUtf8, removeHexPrefix, padRight } from "enc-utils";
 
 function parseSignature(signature: string) {
   let name = "";
@@ -38,7 +39,7 @@ const registryMap = {
   "1": "0x44691B39d1a75dC4E0A0346CBB15E310e6ED1E86",
 };
 
-export const lookupMethod = async (methodHash: string): Promise<Method | null> => {
+export const lookupMethod = async (methodHash: string): Promise<Ethereum.Method | null> => {
   let result: any = null;
 
   const chainId = "eip155:1";
