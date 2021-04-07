@@ -1,0 +1,72 @@
+{
+  "1": {
+    "name": "Ethereum Mainnet",
+    "id": "eip155:1",
+    "rpc": ["https://api.mycryptoapi.com/eth"],
+    "slip44": 60,
+    "testnet": false
+  },
+  "5": {
+    "name": "Ethereum Goerli",
+    "id": "eip155:5",
+    "rpc": ["https://rpc.goerli.mudit.blog"],
+    "slip44": 60,
+    "testnet": true
+  },
+  "10": {
+    "name": "Optimism Mainnet",
+    "id": "eip155:10",
+    "rpc": ["https://mainnet.optimism.io"],
+    "slip44": 60,
+    "testnet": false
+  },
+  "42": {
+    "name": "Ethereum Kovan",
+    "id": "eip155:42",
+    "rpc": ["https://kovan.poa.network"],
+    "slip44": 60,
+    "testnet": true
+  },
+  "69": {
+    "name": "Optimism Kovan",
+    "id": "eip155:69",
+    "rpc": ["https://kovan.optimism.io"],
+    "slip44": 60,
+    "testnet": true
+  },
+  "100": {
+    "name": "xDAI",
+    "id": "eip155:100",
+    "rpc": ["https://dai.poa.network"],
+    "slip44": 60,
+    "testnet": false
+  },
+  "137": {
+    "name": "Matic Mainnet",
+    "id": "eip155:137",
+    "rpc": ["https://rpc-mainnet.matic.network"],
+    "slip44": 60,
+    "testnet": false
+  },
+  "420": {
+    "name": "Optimism Goerli",
+    "id": "eip155:420",
+    "rpc": ["https://goerli.optimism.io"],
+    "slip44": 60,
+    "testnet": true
+  },
+  "80001": {
+    "name": "Matic Mumbai",
+    "id": "eip155:80001",
+    "rpc": ["https://rpc-mumbai.matic.today"],
+    "slip44": 60,
+    "testnet": true
+  },
+  "212984383488152": {
+    "name": "Arbitrum Kovan",
+    "id": "eip155:212984383488152",
+    "rpc": ["https://kovan4.arbitrum.io/rpc"],
+    "slip44": 60,
+    "testnet": true
+  }
+}
