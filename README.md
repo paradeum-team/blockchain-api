@@ -6,14 +6,14 @@ A simple Blockchain API proxy for CAIP-compatible dapps
 
 ```sh
 # get chain data for provided chainId
-https://blockchain-api.vercel.app/api/chain/[chainId]
+https://blockchain-api.xyz/api/chain/[chainId]
 
 # get chain list for provided namespace
-https://blockchain-api.vercel.app/api/namespace/[namespace]
+https://blockchain-api.xyz/api/namespace/[namespace]
 
 # get only testnets for provided namespace
-https://blockchain-api.vercel.app/api/namespace/[namespace]?testnet=true
+https://blockchain-api.xyz/api/namespace/[namespace]?testnet=true
 
 # get only chains with public rpc for provided namespace
-https://blockchain-api.vercel.app/api/namespace/[namespace]?rpc=true
+https://blockchain-api.xyz/api/namespace/[namespace]?rpc=true
 ```
