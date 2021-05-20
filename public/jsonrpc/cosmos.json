@@ -1,0 +1,8 @@
+{
+  "methods": {
+    "chain": ["cosmos_getChain"],
+    "accounts": ["cosmos_getAccounts"],
+    "request": ["cosmos_requestAccounts"],
+    "sign": ["cosmos_signAmino, cosmos_signDirect"]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "methods": {
+    "chain": ["eth_chainId"],
+    "accounts": ["eth_accounts"],
+    "request": ["eth_requestAccounts", "eth_addEthereumChain"],
+    "sign": [
+      "eth_sign",
+      "eth_signTypedData",
+      "eth_signTransaction",
+      "eth_sendTransaction",
+      "personal_sign"
+    ]
+  }
+}

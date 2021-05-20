@@ -4,10 +4,7 @@ import polkadot from "../public/chains/polkadot.json";
 
 import { ChainData, NamespaceList, FilterOptions } from "../types";
 import { filterChain } from "./filter";
-
-export function parseChainId(chainId: string): string[] {
-  return chainId.split(":");
-}
+import { parseChainId } from "./misc";
 
 export function getNamespaceList(
   chainId: string,

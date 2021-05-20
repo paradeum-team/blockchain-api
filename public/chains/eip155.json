@@ -62,10 +62,10 @@
     "slip44": 60,
     "testnet": true
   },
-  "212984383488152": {
+  "144545313136048": {
     "name": "Arbitrum Kovan",
-    "id": "eip155:212984383488152",
-    "rpc": ["https://kovan4.arbitrum.io/rpc"],
+    "id": "eip155:144545313136048",
+    "rpc": ["https://kovan5.arbitrum.io/rpc"],
     "slip44": 60,
     "testnet": true
   }
