@@ -55,6 +55,20 @@
     "slip44": 60,
     "testnet": true
   },
+  "42220": {
+    "name": "Celo Mainnet",
+    "id": "eip155:42220",
+    "rpc": ["https://forno.celo.org"],
+    "slip44": 52752,
+    "testnet": false
+  },
+  "44787": {
+    "name": "Celo Alfajores",
+    "id": "eip155:44787",
+    "rpc": ["https://alfajores-forno.celo-testnet.org"],
+    "slip44": 52752,
+    "testnet": true
+  },
   "80001": {
     "name": "Polygon Mumbai",
     "id": "eip155:80001",
