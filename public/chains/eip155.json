@@ -42,7 +42,7 @@
     "testnet": false
   },
   "137": {
-    "name": "Matic Mainnet",
+    "name": "Polygon Mainnet",
     "id": "eip155:137",
     "rpc": ["https://rpc-mainnet.matic.network"],
     "slip44": 60,
@@ -56,7 +56,7 @@
     "testnet": true
   },
   "80001": {
-    "name": "Matic Mumbai",
+    "name": "Polygon Mumbai",
     "id": "eip155:80001",
     "rpc": ["https://rpc-mumbai.matic.today"],
     "slip44": 60,
