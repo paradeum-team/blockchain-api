@@ -55,6 +55,13 @@
     "slip44": 60,
     "testnet": true
   },
+  "42161": {
+    "name": "Arbitrum One",
+    "id": "eip155:42161",
+    "rpc": ["https://arb1.arbitrum.io/rpc"],
+    "slip44": 60,
+    "testnet": false
+  },
   "42220": {
     "name": "Celo Mainnet",
     "id": "eip155:42220",
