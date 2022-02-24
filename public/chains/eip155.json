@@ -76,6 +76,13 @@
     "slip44": 52752,
     "testnet": true
   },
+  "65534": {
+    "name": "Solar Network Test",
+    "id": "eip155:65534",
+    "rpc": ["https://test-sct.netwarps.com"],
+    "slip44": 65534,
+    "testnet": true
+  },
   "80001": {
     "name": "Polygon Mumbai",
     "id": "eip155:80001",
