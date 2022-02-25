@@ -80,7 +80,7 @@
     "name": "Solar Network Test",
     "id": "eip155:65534",
     "rpc": ["https://test-sct.netwarps.com"],
-    "slip44": 65534,
+    "slip44": 60,
     "testnet": true
   },
   "80001": {
