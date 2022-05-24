@@ -34,13 +34,6 @@
     "slip44": 60,
     "testnet": true
   },
-  "100": {
-    "name": "xDAI",
-    "id": "eip155:100",
-    "rpc": ["https://dai.poa.network"],
-    "slip44": 60,
-    "testnet": false
-  },
   "137": {
     "name": "Polygon Mainnet",
     "id": "eip155:137",
@@ -74,13 +67,6 @@
     "id": "eip155:44787",
     "rpc": ["https://alfajores-forno.celo-testnet.org"],
     "slip44": 52752,
-    "testnet": true
-  },
-  "65534": {
-    "name": "Solar Network Test",
-    "id": "eip155:65534",
-    "rpc": ["https://test-sct.netwarps.com"],
-    "slip44": 60,
     "testnet": true
   },
   "65535": {
